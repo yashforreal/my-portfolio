@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Box } from '@mui/material';
+import { Intro } from './sections/intro';
+import Navbar from './components/navbar'; // Import the Navbar component
+import './App.css'
+import Skills from './sections/skills';
+import AboutMe from './sections/aboutMe';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Box className='content'>
+        <Intro />
+        <section id='about'> <AboutMe /> </section>
+        <section id='skills'> <Skills /> </section> 
+        {/* TODO: Work Experience section */}
+        {/* TODO: Project section */}
+      </Box>
+    </>
   );
 }
 
