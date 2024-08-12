@@ -13,7 +13,7 @@ function Skill({ name, stars }) {
       <Typography variant="h6">{name}</Typography>
       {Array.from({ length: 10 }).map((_, index) =>
         index < stars ? (
-          <StarIcon key={index} style={{color:"red"}} />
+          <StarIcon key={index} style={{ color: "red" }} />
         ) : (
           <StarBorderIcon key={index} />
         )
@@ -24,8 +24,8 @@ function Skill({ name, stars }) {
 
 function Skills() {
   return (
-    <Box sx={{ mt: 1, mb: 1 }}>
-      <Typography variant="h4" gutterBottom>Skills</Typography>
+    <Box sx={{ my: 1 }}>
+      <Typography variant="h5" fontFamily={"fantasy"}>Skills</Typography>
       {data.skills.map((skill, index) => (
         <Skill key={index} name={skill.name} stars={skill.stars} />
       ))}
