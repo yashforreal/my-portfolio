@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import { data } from "../data";
-import { red } from '@mui/material/colors';
 
 
 function Skill({ name, stars }) {
